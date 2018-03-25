@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/png" href="../img/me/icone.png">
+  <title>AlfaGebra | Sistemas de Equações Lineares</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../css/alfagebra/sistemas.css">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../css/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="../css/morris.css">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <script src="../js/alfagebra/operacoesElementares.js"></script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>G</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg">Alfa<b>Gebra</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">          
+                <!-- Menu Barra top - Botão ajuda -->
+                <li class="dropdown notifications-menu">
+                  <a href="#" class="dropdown-toggle">
+                      <span>Calculadora</span>
+                      <i class="fa fa-calculator" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span>Ajuda</span>
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <!-- Botão para configurar o menu -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    
+
+    <!-- Menu lateral -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+          </button>
+        </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MENU DE NAVEGAÇÃO</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-calculator" aria-hidden="true"></i></i> <span>Calcular Expressões</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          
+          <ul class="treeview-menu">
+            <li>
+              <a href="../sistemas.html">
+                <i class="fa fa-circle-o"></i> 
+                Matriz Forma Escada
+              </a>
+            </li>
+
+            <li>
+              <a href="../teoremas.html">
+                <i class="fa fa-circle-o"></i> 
+                Resolução Sistema
+              </a>
+            </li>
+
+            <li>
+                <a href="../gauss.html">
+                    <i class="fa fa-circle-o"></i> 
+                    Método de Gauss
+                </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Material de Estudos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <ul class="treeview-menu">
+            <li>
+              <a href="../paginasTeoria/operacoesElementares.html"><i class="fa fa-circle-o"></i> 
+                Operações Elementares
+              </a>
+            </li>
+            <li >
+              <a href="../paginasTeoria/matrizEscada.html">
+                <i class="fa fa-circle-o"></i> 
+                Matriz Forma Escada
+              </a>
+            </li>
+
+            <li>
+              <a href="../paginasTeoria/resolucaoSistema.html">
+                <i class="fa fa-circle-o"></i> 
+                Resolução Sistema
+              </a>
+            </li>
+
+            <li class="active">
+                <a href="../paginasTeoria/gauss.html">
+                    <i class="fa fa-circle-o"></i> 
+                    Método de Gauss
+                </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="../documentacao.html">
+            <i class="fa fa-book"></i> 
+            <span>Documentação</span>
+          </a>
+        </li>
+      </ul>
+      </section>
+    </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="background-color: white; font-size: 1.4em;">
+        <section class="content ">
+            <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-tabs">
+                      <li class="active">
+                        <a data-toggle="tab" href="#home">
+                          <i class="fa fa-calculator"></i>
+                          Definição
+                        </a>
+                      </li>
+                      <li>
+                        <a data-toggle="tab" href="#exemplos">
+                          <i class="fa fa-code"></i>
+                          Exemplos
+                        </a>
+                      </li>
+                      <li>
+                        <a data-toggle="tab" href="#materialComplementar">
+                          <i class="fa fa-desktop"></i>
+                          Material Complementar
+                        </a>
+                      </li>
+                      <li>
+                        <a data-toggle="tab" href="#videoAulas">
+                          <i class="fa fa-toggle-right"></i>
+                          Vídeos Aulas
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content">
+                      
+
+                        <div id="exemplos" class="tab-pane fade">
+                            <h3>Exemplos</h3>
+                            <p>Exemplos de resoluções</p>
+                        </div>
+
+                        <div id="materialComplementar" class="tab-pane fade">
+                            <h3>Material Complementar</h3>
+                            <p>Material complementar para o estudo</p>
+                        </div>
+
+                        <div id="videoAulas" class="tab-pane fade">
+                            <h3>Vídeos Aulas</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.0
+      </div>
+      <strong>Copyright &copy; 2018 - Todos os Direitos Reservados - <a href="http://ww2.uft.edu.br/">Universidade Federal do Tocantins</a> - </strong> Ciência da Computação.</br>
+      Desenvolvido por : Osmir Custódio Mariano e Jhonatan Sousa Santiago
+    </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+      </div>
+      
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../js/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="../js/raphael.min.js"></script>
+<script src="../js/morris.min.js"></script>
+<!-- Sparkline -->
+<!-- AdminLTE App -->
+<script src="../js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../js/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../js/demo.js"></script>
+</body>
+</html>

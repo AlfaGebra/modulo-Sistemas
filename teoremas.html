@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="img/me/icone.png">
+    <title>AlfaGebra | Sistemas de Equações Lineares</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/alfagebra/sistemas.css">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+        folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="css/morris.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <script src="js/alfagebra/teoremas.js"></script>
+    
+    <!-- Biblioteca para gerar PDF  -->
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>A</b>Gβ</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">Alfa<b>Gebraβ</b></span>
+        </a>
+          <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+              <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">          
+              <!-- Menu Barra top - Botão ajuda -->
+              <li class="dropdown notifications-menu" >
+                <a href="#" data-toggle="modal" data-target="#exampleModal" class="dropdown-toggle">
+                    <span>Calculadora</span>
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                </a>
+              </li>
+              
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Ajuda</span>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>
+                </a>
+              </li>
+                <!-- Botão para configurar o menu -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Calculadora</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Em breve
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu lateral -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+            <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">MENU DE NAVEGAÇÃO</li>
+          <li class="active treeview">
+            <a href="#">
+                <i class="fa fa-calculator" aria-hidden="true"></i></i> <span>Calcular Expressões</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            
+            <ul class="treeview-menu">
+              <li>
+                <a href="sistemas.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Matriz Forma Escada
+                </a>
+              </li>
+
+              <li class="active">
+                <a href="teoremas.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Resolução Sistema
+                </a>
+              </li>
+
+              <li>
+                <a href="gauss.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Método de Gauss
+                </a>
+              </li>
+            </ul>
+          </li>
+            
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-laptop"></i>
+              <span>Material de Estudos</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+  
+            <ul class="treeview-menu">
+              <li>
+                <a href="paginasTeoria/operacoesElementares.html"><i class="fa fa-circle-o"></i> 
+                  Operações Elementares
+                </a>
+              </li>
+              <li>
+                <a href="paginasTeoria/matrizEscada.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Matriz Forma Escada
+                </a>
+              </li>
+  
+              <li>
+                <a href="paginasTeoria/resolucaoSistema.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Resolução Sistema
+                </a>
+              </li>
+
+              <li>
+                <a href="paginasTeoria/gauss.html">
+                  <i class="fa fa-circle-o"></i> 
+                  Método de Gauss
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="documentacao.html">
+              <i class="fa fa-book"></i> 
+              <span>Documentação</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <section class="content ">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box box-widget widget-user">
+                <div class="widget-user-header bg-aqua-active">
+                  <h3 style="font-size: 2em; font-weight: bolder; text-align: right;">Resolução de sistemas de equações lineares</h3>
+                  <h5 style="text-align: right;">Sistemas de Equações Lineares</h5>
+                </div>
+                
+                <div class="box box-info">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label class="labelDescrição">O sistema AlfaGebra trabalha com formatação de expressões, para que o sistema possa calcular o resultado da expressão, é necessário informar as expressões de acordo com o exemplo ou para mais informações acesse a documentação no menu lateral na opção Documentação: Ex: [1 2 3][2 3 4][1 5 6] </label>
+                      <label class="labelExpresao">Forneça expressão:</label>
+                      <input type="text" name="expressao" id="expressao" class="form-control my-colorpicker1" required placeholder="Ex: [1 -2 3][2 3 4]" style="padding: 2% 2% 2% 1%; font-size: 1.4em; border: none; border-bottom: solid rgb(172, 172, 172) 1px; outline:none;">
+                    </div>
+                    <button onclick="validacaoExpressaoEntrada()"class="btn btn-default btn-style-one btn-calcular">
+                      Calcular
+                    </button>    
+                  </div>
+                </div>
+              </div>
+
+              <div class="box" id="mostra-resultado" style="display: none;">
+                <div class="box-header with-border">
+                  <h3 class="box-title" style="font-weight: bolder; font-size: 1.4em;">
+                    <span id="resultado"></span>
+                  </h3>
+          
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" id="pdfResultado">
+                      <span>PDF</span>
+                      <i class="fa fa-file" aria-hidden="true"></i>
+                    </button>
+      
+                    <button type="button" class="btn btn-box-tool" id="limpaResultado">
+                      <span>LIMPAR</span>
+                      <i class="fa fa-eraser" aria-hidden="true"></i>
+                    </button>
+      
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Esconder">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                </div>    
+                
+                <div class="box-footer" id="divResultado">
+                  <p style="text-align: center; font-size: 1.7em; font-weight: bold;">Sistema de equação fornecido</p>
+                  <span id="matriz" style="font-size: 1.7em; text-align: center;"></span>
+    
+                  <hr size="300" width="1" align="left">
+                  <p style="text-align: center; font-size: 1.7em; font-weight: bold;">Processamento da resolução do cálculo</p>
+                  <span id="matrizTratamento" style="font-size: 1.7em;"></span>
+                  <span id="resultado-final" style="font-size: 1.7em;"></span>
+    
+                  <p style="font-size: 1.7em; font-weight: bolder;text-align: center;">Matriz forma escada da expressão fornecida é: <br/></p>
+                  <span id="formaEscada" style="font-size: 1.7em;"></span>
+                  
+                  <span id="resultado-verifica" style="font-size: 1.7em;"></span>
+                </div>
+                <div class="editor"></div>
+              </div>
+
+              <div class="box">
+                <div class="box-header with-border">
+                  <div id="disqus_thread"></div>
+                </div>
+              </div>
+            </div>
+            
+        </section>
+      </div>
+
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Versão</b> 1.0.0003
+        </div>
+        <strong>Copyright &copy; 2018 - Todos os Direitos Reservados <br/><a href="http://ww2.uft.edu.br/" target="_blank">Universidade Federal do Tocantins</a> - 
+        <a href="https://palmas.uft.edu.br/grad/ccomp/" target="_blank">Ciência da Computação.</a></strong><br/>
+        Desenvolvido por : Osmir Custódio Mariano e Jhonatan Sousa Santiago
+      </footer>
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                  <p>Will be 23 on April 24th</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                  <p>New phone +1(800)555-1234</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                  <p>nora@example.com</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                  <p>Execution time 5 seconds</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="label label-danger pull-right">70%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Update Resume
+                  <span class="label label-success pull-right">95%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Laravel Integration
+                  <span class="label label-warning pull-right">50%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Back End Framework
+                  <span class="label label-primary pull-right">68%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Allow mail redirect
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Other sets of options are available
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Expose author name in posts
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Allow the user to show his name in blog posts
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Show me as online
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Turn off notifications
+                <input type="checkbox" class="pull-right">
+              </label>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Delete chat history
+                <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+              </label>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+        immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+
+  <script type='text/javascript'>
+    var doc = new jsPDF();
+    var datacompleta = new Date();
+    var horacompleta = datacompleta.getHours() + datacompleta.getMinutes() + datacompleta.getSeconds();                                               //gera numeros randomicos para acrescentar no arquivo PDF, evitando duplicidade de registro...
+    var margins = { 
+      top: 50, 
+      bottom: 50, 
+      left: 30, 
+      right: 30, 
+      width: 180 
+    };
+    var specialElementHandlers = {
+      '#editor': function (element, renderer) {
+        return true;
+      }
+    };
+
+    $('#pdfResultado').click(function () {   
+      doc.fromHTML($('#divResultado').html(), 15, 15, {
+        'width': margins.width,
+        'elementHandlers': specialElementHandlers
+      });
+      doc.save('AlfaGebraResolucao'+ datacompleta +'.pdf');
+    });
+
+
+    $(document).ready(function(){
+      $('#limpaResultado').click(function(){
+        $('#matriz').html( '' );
+      });
+
+      $('#limpaResultado').click(function(){
+        $('#matrizTratamento').html( '' );
+      });
+
+      $('#limpaResultado').click(function(){
+        $('#resultado-final').html( '' );
+      });
+
+      $('#limpaResultado').click(function(){
+        $('#formaEscada').html( '' );
+      });
+
+      $('#limpaResultado').click(function(){
+        $('#resultado-verifica').html( '' );
+      });
+  });
+  </script>
+
+  <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://alfagebra-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <!-- jQuery 3 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Morris.js charts -->
+  <script src="js/raphael.min.js"></script>
+  <script src="js/morris.min.js"></script>
+  <!-- Sparkline -->
+  <!-- AdminLTE App -->
+  <script src="js/adminlte.min.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="js/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="js/demo.js"></script>
+  <script id="dsq-count-scr" src="//alfagebra-1.disqus.com/count.js" async></script>
+  </body>
+</html>

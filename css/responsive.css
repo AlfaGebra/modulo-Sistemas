@@ -1,0 +1,59 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .mainmenu-area ul.nav.navbar-nav li a {
+        padding: 0 8px;
+    }
+    .about-right {
+      padding-top: 20px;
+    }
+    .about-right a {
+        margin-bottom: 20px;
+    }
+}
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+        padding: 15px 15px;
+    }
+    .mainmenu-area {
+        background-color: #111;
+        padding: 8px 0;
+    }
+    .mainmenu-area ul.nav.navbar-nav li a:hover {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    }
+    .header-text h1 {
+        font-size: 24px;
+        line-height: 42px;
+    }
+    .header-text p:before {
+    right: 20px;
+    }
+    .header-text p:after {
+        left: 6px;
+    }
+    .about-right {
+        padding-top: 30px;
+    }
+    .about-right a {
+        margin-bottom: 20px;
+    }
+    .single-service {
+        margin-top: 30px;
+    }
+    ul.award-list{
+        text-align: center;
+    }
+}
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}

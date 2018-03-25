@@ -1,0 +1,40 @@
+.express{
+    padding: 2%;
+}
+
+.btn-reflexao{
+    float: center;
+    font-size: 1.3em !important;
+    background-color: #0277BD !important; 
+    color: white !important; 
+    font-size: 1.4em !important; 
+    text-transform: uppercase !important;
+    font-weight: bolder !important;
+}
+
+.btn-reflexao:hover{
+    background-color: rgb(230, 128, 11) !important; 
+    color: white !important;
+    font-weight: bolder;
+}
+
+#flipButton, #limpar
+{
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+
+    width: 402px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #FCC302;
+    font-size: 18px;
+}
+
+#minus:hover, #plus:hover
+{
+    background-color: Yellow;
+}

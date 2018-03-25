@@ -1,0 +1,15 @@
+.menuFormatacao {
+    color: #ffa000 !important; 
+    font-size: 1.0em !important;
+    padding-right: 5% !important;
+}
+
+.menuFormatacao:hover{
+    background-color: #ffa000 !important;
+    color: white !important;
+}
+
+.logoFormatacao{
+    width: 60px;
+}
+
